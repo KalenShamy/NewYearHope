@@ -8,4 +8,4 @@
 1. (fill in later)
 
 #### Solver:
-(https://kalenshamy.github.io/NewYearHope)
+https://kalenshamy.github.io/NewYearHope
