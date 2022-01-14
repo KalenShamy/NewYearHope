@@ -6,7 +6,7 @@ for (var a = 0; a < 10; a++) {
       console.log((a*10+e)/Math.pow(10,2) + "%");
       for (var h = 1; h < 10; h++) {
         if (h != a && h != e) {
-          for (var n = 0; n < 10; n++) {
+          for (var n = 1; n < 10; n++) {
             if (n != a && n != e && n != h) {
               for (var o = 0; o < 10; o++) {
                 if (o != a && o != e && o != h && o != n) {
@@ -16,7 +16,7 @@ for (var a = 0; a < 10; a++) {
                         if (r != a && r != e && r != h && r != n && r != o && r != p) {
                           for (var w = 1; w < 10; w++) {
                             if (w != a && w != e && w != h && w != n && w != o && w != p && w != r) {
-                              for (var y = 0; y < 9; y++) {
+                              for (var y = 1; y < 9; y++) {
                                 if (y != a && y != e && y != h && y != n && y != o && y != p && y != r && y != w) {
                                   var NEW = parseInt("" + n + e + w);
                                   var YEAR = parseInt("" + y + e + a + r);
