@@ -24,7 +24,6 @@ for (var a = 0; a < 10; a++) {
 
                                   if (NEW + YEAR == HOPE) {
                                     answers[answers.length] = [a, e, h, n, o, p, r, w, y];
-                                    console.log(answers[answers.length-1]);
                                   }
                                 }
                               }
@@ -45,5 +44,25 @@ for (var a = 0; a < 10; a++) {
 }
 
 for (var i = 0; i < answers.length; i++) {
-    document.getElementById("copyText").innerHTML += (i+1) + ":&nbsp;&nbsp;&nbsp;&nbsp;" + "A:&nbsp;" + answers[i][0] + "&nbsp;&nbsp;E:&nbsp;" + answers[i][1] + "&nbsp;&nbsp;H:&nbsp;" + answers[i][2] + "&nbsp;&nbsp;N:&nbsp;" + answers[i][3] + "&nbsp;&nbsp;O:&nbsp;" + answers[i][4] + "&nbsp;&nbsp;P:&nbsp;" + answers[i][5] + "&nbsp;&nbsp;R:&nbsp;" + answers[i][6] + "&nbsp;&nbsp;W:&nbsp;" + answers[i][7] + "&nbsp;&nbsp;Y:&nbsp;" + answers[i][8] + "<br>";
+    document.getElementById("copyText").innerHTML += "<a href=\"javascript:void(0)\" id=\"" + i + "\" onclick=\"viewer(" + i + ")\"style=\"text-decoration: none;color: black;\">" + (i+1) + ":&nbsp;&nbsp;&nbsp;&nbsp;" + "A:&nbsp;" + answers[i][0] + "&nbsp;&nbsp;E:&nbsp;" + answers[i][1] + "&nbsp;&nbsp;H:&nbsp;" + answers[i][2] + "&nbsp;&nbsp;N:&nbsp;" + answers[i][3] + "&nbsp;&nbsp;O:&nbsp;" + answers[i][4] + "&nbsp;&nbsp;P:&nbsp;" + answers[i][5] + "&nbsp;&nbsp;R:&nbsp;" + answers[i][6] + "&nbsp;&nbsp;W:&nbsp;" + answers[i][7] + "&nbsp;&nbsp;Y:&nbsp;" + answers[i][8] + "</a><br>";
+}
+
+var lastNum = 0;
+
+function viewer(num) {
+  document.getElementById(lastNum.toString()).style.fontWeight = "normal";
+  document.getElementById(num.toString()).style.fontWeight = "bold";
+
+  var A = answers[num][0];
+  var E = answers[num][1];
+  var H = answers[num][2];
+  var N = answers[num][3];
+  var O = answers[num][4];
+  var P = answers[num][5];
+  var R = answers[num][6];
+  var W = answers[num][7];
+  var Y = answers[num][8];
+
+  document.getElementById("viewer").innerHTML = "&nbsp;&nbsp;&nbsp;" + N + E + W + "<br>+" + Y + E + A + R + "<br>=" + H + O + P + E;
+  lastNum = num;
 }
